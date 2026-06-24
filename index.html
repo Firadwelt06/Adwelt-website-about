@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Adwelt Enterprises</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F8FAFC;
+        }
+        html { scroll-behavior: smooth; }
+
+        @keyframes fadeSlideUp {
+            from { opacity: 0; transform: translateY(28px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        .hero-animate {
+            opacity: 0;
+            animation: fadeSlideUp 0.7s ease forwards;
+        }
+
+        /* Timeline line */
+        .timeline-line {
+            position: absolute;
+            left: 19px;
+            top: 28px;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #0f766e, #e2e8f0);
+        }
+    </style>
+</head>
+<body class="text-slate-900">
+
+    <!-- ======== NAVIGATION (mirrors main page exactly) ======== -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-6">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center space-x-2">
+                <img src="adwelt-flat-icon.png" alt="Adwelt Logo" class="w-10 h-10 object-contain" />
+                <span class="text-2xl md:text-3xl font-bold tracking-tight text-slate-900">
+                    ADWELT<span class="text-teal-700 underline decoration-teal-200 decoration-4 underline-offset-4">ENTERPRISES</span>
+                </span>
+            </a>
+
+            <!-- Desktop Links -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html#services" class="text-sm font-semibold hover:text-teal-700 transition-colors">Services</a>
+                <a href="index.html#portfolio" class="text-sm font-semibold hover:text-teal-700 transition-colors">Past Work</a>
+                <a href="about.html" class="text-sm font-semibold text-teal-700">About</a>
+                <a href="index.html#contact" class="text-sm font-semibold hover:text-teal-700 transition-colors">Contact</a>
+                <a href="https://wa.me/2349048774929" target="_blank" rel="noreferrer"
+                   class="bg-teal-700 text-white px-5 py-2.5 rounded-full text-sm font-bold hover:bg-teal-800 transition-all shadow-md flex items-center gap-2">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i> Consult Now
+                </a>
+            </div>
+
+            <!-- Mobile Toggle -->
+            <button id="menu-btn" class="md:hidden p-2 text-slate-900" aria-label="Toggle Menu">
+                <i data-lucide="menu" class="w-7 h-7"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+             class="md:hidden absolute top-0 left-0 w-full bg-white shadow-2xl transition-all duration-300 ease-in-out transform -translate-y-full opacity-0 pointer-events-none">
+            <div class="pt-24 pb-12 px-6 flex flex-col space-y-6">
+                <a href="index.html#services" class="text-xl font-bold text-slate-800 border-b border-slate-100 pb-4">Services</a>
+                <a href="index.html#portfolio" class="text-xl font-bold text-slate-800 border-b border-slate-100 pb-4">Past Work</a>
+                <a href="about.html" class="text-xl font-bold text-teal-700 border-b border-slate-100 pb-4">About</a>
+                <a href="index.html#contact" class="text-xl font-bold text-slate-800 border-b border-slate-100 pb-4">Contact</a>
+                <a href="https://wa.me/2349048774929" target="_blank" rel="noreferrer"
+                   class="bg-teal-700 text-white p-4 rounded-xl font-bold text-center shadow-lg flex items-center justify-center gap-2">
+                    <i data-lucide="message-circle" class="w-5 h-5"></i> WhatsApp Consultation
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ======== HERO ======== -->
+    <section class="pt-36 pb-20 lg:pt-52 lg:pb-28 relative overflow-hidden bg-white">
+        <!-- Soft glow blobs -->
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-teal-100 rounded-full blur-[140px] opacity-40 -z-10"></div>
+        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-100 rounded-full blur-[140px] opacity-40 -z-10"></div>
+
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl">
+                <div class="hero-animate inline-flex items-center gap-2 bg-teal-50 border border-teal-100 text-teal-800 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-8"
+                     style="animation-delay: 0.1s">
+                    <i data-lucide="user" class="w-3 h-3"></i> The Person Behind Adwelt
+                </div>
+
+                <h1 class="hero-animate text-4xl lg:text-6xl font-black text-slate-900 mb-6 tracking-tight leading-tight"
+                    style="animation-delay: 0.25s">
+                    Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-700 to-blue-500">Olorunbukola.</span>
+                </h1>
+
+                <p class="hero-animate text-xl lg:text-2xl text-slate-600 leading-relaxed max-w-2xl"
+                   style="animation-delay: 0.42s">
+                    A 24-year-old self-taught data professional from Nigeria — building solutions that turn messy, overwhelming data into decisions that actually move businesses forward.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== ORIGIN STORY ======== -->
+    <section class="py-20 bg-[#F8FAFC]">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Text -->
+                <div>
+                    <h2 class="text-xs font-bold text-teal-700 uppercase tracking-widest mb-4">The Origin</h2>
+                    <h3 class="text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight mb-6">
+                        It started with a recruitment form.
+                    </h3>
+                    <div class="space-y-5 text-slate-600 text-lg leading-relaxed">
+                        <p>
+                            I've always been the kind of person who needs to solve things. Give me a problem and enough details, and I'll find a way through. That trait was always there — but I didn't have a name for it yet.
+                        </p>
+                        <p>
+                            Then one day, while filling out a Nigerian Navy recruitment form, I saw it listed: <span class="font-semibold text-slate-800">Database Administration.</span> Something clicked. Not because I already knew what it was — but because it <em>felt</em> like me. A role built entirely around organizing information, solving structural problems, making systems work. I thought: <span class="italic">"This is what I should be doing."</span>
+                        </p>
+                        <p>
+                            I didn't wait for a classroom. I started learning — MySQL, data analysis, automation, Python. I built real things. I broke real things. I fixed them. And somewhere in that process, Adwelt Enterprises was born.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Quote card -->
+                <div class="bg-teal-900 text-white rounded-[40px] p-10 lg:p-12 relative overflow-hidden">
+                    <div class="absolute top-6 right-8 text-teal-700 opacity-40">
+                        <i data-lucide="quote" class="w-16 h-16"></i>
+                    </div>
+                    <p class="text-2xl lg:text-3xl font-bold leading-snug mb-8 relative z-10">
+                        "Give me a problem and the details — I'll find a way through."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-teal-600 rounded-full flex items-center justify-center font-black text-lg">O</div>
+                        <div>
+                            <div class="font-bold">Adeleye Olorunbukola Jonathan</div>
+                            <div class="text-teal-300 text-sm">Founder, Adwelt Enterprises · Imo State, Nigeria</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== TIMELINE ======== -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6 max-w-3xl">
+            <h2 class="text-xs font-bold text-teal-700 uppercase tracking-widest mb-4">The Journey</h2>
+            <h3 class="text-3xl font-bold text-slate-900 tracking-tight mb-14">How I got here.</h3>
+
+            <div class="space-y-12">
+
+                <!-- Step 1 -->
+                <div class="flex gap-8 relative">
+                    <div class="flex flex-col items-center">
+                        <div class="w-10 h-10 rounded-full bg-teal-700 flex items-center justify-center text-white font-black text-sm shrink-0 z-10">1</div>
+                        <div class="w-0.5 flex-1 bg-gradient-to-b from-teal-700 to-slate-200 mt-2"></div>
+                    </div>
+                    <div class="pb-12">
+                        <div class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">The Spark</div>
+                        <h4 class="text-xl font-bold text-slate-900 mb-2">Discovered database administration</h4>
+                        <p class="text-slate-600 leading-relaxed">A Navy recruitment form listed "Database Administration" as a role. That single line changed the direction of my life. I realised there was an entire profession built around what I naturally loved — organizing, structuring, and solving with data.</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="flex gap-8 relative">
+                    <div class="flex flex-col items-center">
+                        <div class="w-10 h-10 rounded-full bg-teal-700 flex items-center justify-center text-white font-black text-sm shrink-0 z-10">2</div>
+                        <div class="w-0.5 flex-1 bg-gradient-to-b from-teal-700 to-slate-200 mt-2"></div>
+                    </div>
+                    <div class="pb-12">
+                        <div class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Self-Taught</div>
+                        <h4 class="text-xl font-bold text-slate-900 mb-2">Learned by building, not watching</h4>
+                        <p class="text-slate-600 leading-relaxed">No formal degree in data — just relentless curiosity and real projects. I taught myself MySQL, Python, Streamlit, Excel automation, and Flask by building systems that actually had to work. Failure was part of the process.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="flex gap-8 relative">
+                    <div class="flex flex-col items-center">
+                        <div class="w-10 h-10 rounded-full bg-teal-700 flex items-center justify-center text-white font-black text-sm shrink-0 z-10">3</div>
+                        <div class="w-0.5 flex-1 bg-gradient-to-b from-teal-700 to-slate-200 mt-2"></div>
+                    </div>
+                    <div class="pb-12">
+                        <div class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">First Real Impact</div>
+                        <h4 class="text-xl font-bold text-slate-900 mb-2">Smart Result NG — school data at scale</h4>
+                        <p class="text-slate-600 leading-relaxed">My first major project: a result management platform for schools. I designed and deployed the entire back end in MySQL, built a Streamlit front end, and delivered a system capable of instant PDF generation and 24/7 remote access. The feedback: <span class="italic">"Good job done — results came out on time this term."</span></p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="flex gap-8">
+                    <div class="flex flex-col items-center">
+                        <div class="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center text-white font-black text-sm shrink-0 z-10">→</div>
+                    </div>
+                    <div>
+                        <div class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Now</div>
+                        <h4 class="text-xl font-bold text-slate-900 mb-2">Adwelt Enterprises — solving for the world</h4>
+                        <p class="text-slate-600 leading-relaxed">Today I work with clients remotely across Nigeria and beyond, tackling database challenges, automation projects, and analytics systems. At 24, I'm just getting started — and I intend to be known globally.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== SKILLS & TOOLS ======== -->
+    <section class="py-20 bg-[#F8FAFC]">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-14">
+                <h2 class="text-xs font-bold text-teal-700 uppercase tracking-widest mb-3">Toolbox</h2>
+                <h3 class="text-3xl font-bold text-slate-900 tracking-tight">What I work with.</h3>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+
+                <div class="bg-white border border-slate-100 rounded-3xl p-6 text-center hover:shadow-lg hover:border-teal-200 transition-all group">
+                    <div class="w-12 h-12 bg-teal-50 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-teal-700 transition-all">
+                        <i data-lucide="database" class="w-6 h-6 text-teal-700 group-hover:text-white transition-all"></i>
+                    </div>
+                    <div class="font-bold text-slate-900 text-sm mb-1">MySQL</div>
+                    <div class="text-xs text-teal-700 font-semibold">Core Skill</div>
+                </div>
+
+                <div class="bg-white border border-slate-100 rounded-3xl p-6 text-center hover:shadow-lg hover:border-teal-200 transition-all group">
+                    <div class="w-12 h-12 bg-teal-50 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-teal-700 transition-all">
+                        <i data-lucide="bar-chart" class="w-6 h-6 text-teal-700 group-hover:text-white transition-all"></i>
+                    </div>
+                    <div class="font-bold text-slate-900 text-sm mb-1">Python</div>
+                    <div class="text-xs text-teal-700 font-semibold">Core Skill</div>
+                </div>
+
+                <div class="bg-white border border-slate-100 rounded-3xl p-6 text-center hover:shadow-lg hover:border-teal-200 transition-all group">
+                    <div class="w-12 h-12 bg-slate-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-200 transition-all">
+                        <i data-lucide="layout-dashboard" class="w-6 h-6 text-slate-500"></i>
+                    </div>
+                    <div class="font-bold text-slate-900 text-sm mb-1">Streamlit</div>
+                    <div class="text-xs text-slate-400 font-semibold">Growing</div>
+                </div>
+
+                <div class="bg-white border border-slate-100 rounded-3xl p-6 text-center hover:shadow-lg hover:border-teal-200 transition-all group">
+                    <div class="w-12 h-12 bg-slate-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-200 transition-all">
+                        <i data-lucide="table-2" class="w-6 h-6 text-slate-500"></i>
+                    </div>
+                    <div class="font-bold text-slate-900 text-sm mb-1">Excel Automation</div>
+                    <div class="text-xs text-slate-400 font-semibold">Growing</div>
+                </div>
+
+                <div class="bg-white border border-slate-100 rounded-3xl p-6 text-center hover:shadow-lg hover:border-teal-200 transition-all group">
+                    <div class="w-12 h-12 bg-slate-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-200 transition-all">
+                        <i data-lucide="server" class="w-6 h-6 text-slate-500"></i>
+                    </div>
+                    <div class="font-bold text-slate-900 text-sm mb-1">Flask</div>
+                    <div class="text-xs text-slate-400 font-semibold">Learning</div>
+                </div>
+
+                <div class="bg-white border border-slate-100 rounded-3xl p-6 text-center hover:shadow-lg hover:border-teal-200 transition-all group">
+                    <div class="w-12 h-12 bg-teal-50 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-teal-700 transition-all">
+                        <i data-lucide="cpu" class="w-6 h-6 text-teal-700 group-hover:text-white transition-all"></i>
+                    </div>
+                    <div class="font-bold text-slate-900 text-sm mb-1">ML / Analytics</div>
+                    <div class="text-xs text-teal-700 font-semibold">Core Skill</div>
+                </div>
+
+                <div class="bg-white border border-slate-100 rounded-3xl p-6 text-center hover:shadow-lg hover:border-teal-200 transition-all group">
+                    <div class="w-12 h-12 bg-teal-50 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-teal-700 transition-all">
+                        <i data-lucide="workflow" class="w-6 h-6 text-teal-700 group-hover:text-white transition-all"></i>
+                    </div>
+                    <div class="font-bold text-slate-900 text-sm mb-1">Process Design</div>
+                    <div class="text-xs text-teal-700 font-semibold">Core Skill</div>
+                </div>
+
+                <div class="bg-white border border-slate-100 rounded-3xl p-6 text-center hover:shadow-lg hover:border-teal-200 transition-all group">
+                    <div class="w-12 h-12 bg-slate-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-200 transition-all">
+                        <i data-lucide="globe" class="w-6 h-6 text-slate-500"></i>
+                    </div>
+                    <div class="font-bold text-slate-900 text-sm mb-1">Remote Delivery</div>
+                    <div class="text-xs text-slate-400 font-semibold">Always</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== AMBITION STATEMENT ======== -->
+    <section class="py-24 bg-slate-900 text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-teal-900 rounded-full blur-[120px] opacity-50"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-xs font-bold text-teal-400 uppercase tracking-widest mb-6">Ambition</h2>
+                <h3 class="text-3xl lg:text-5xl font-black tracking-tight mb-8 leading-tight">
+                    I intend to be known as a <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-400">global problem solver.</span>
+                </h3>
+                <p class="text-slate-300 text-lg lg:text-xl leading-relaxed mb-12 max-w-2xl mx-auto">
+                    Not just in Nigeria. Not just in Africa. Globally. A resilient mind who will stop at nothing to fulfill his dreams — and who builds real, lasting solutions for the people and businesses that need them most.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="index.html#contact"
+                       class="bg-teal-700 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-teal-600 transition-all shadow-xl">
+                        Work With Me
+                    </a>
+                    <a href="https://wa.me/2349048774929" target="_blank" rel="noreferrer"
+                       class="bg-white/10 border border-white/20 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/20 transition-all flex items-center justify-center gap-2">
+                        <i data-lucide="message-circle" class="w-5 h-5 text-green-400"></i> WhatsApp Me
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== FOOTER (mirrors main page) ======== -->
+    <footer class="py-12 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex items-center justify-center space-x-2 mb-6">
+                <img src="adwelt-flat-icon.png" alt="Adwelt Logo" class="w-8 h-8 object-contain" />
+                <span class="text-lg font-bold tracking-tight">ADWELT ENTERPRISES</span>
+            </div>
+            <p class="text-slate-500 text-sm max-w-xs mx-auto mb-8">Specialized Data & Analytics Consultancy delivering precision across the globe.</p>
+            <div class="pt-8 border-t border-slate-100 text-slate-400 text-[10px] font-bold uppercase tracking-[0.3em]">
+                © 2026 ADWELT ENTERPRISES • REMOTE / WORLDWIDE
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Init Lucide icons
+        lucide.createIcons();
+
+        // Navbar scroll shadow
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.remove('bg-transparent', 'py-6');
+                navbar.classList.add('bg-white', 'shadow-sm', 'py-3');
+            } else {
+                navbar.classList.remove('bg-white', 'shadow-sm', 'py-3');
+                navbar.classList.add('bg-transparent', 'py-6');
+            }
+        });
+
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        let menuOpen = false;
+        menuBtn.addEventListener('click', () => {
+            menuOpen = !menuOpen;
+            if (menuOpen) {
+                mobileMenu.classList.remove('-translate-y-full', 'opacity-0', 'pointer-events-none');
+                mobileMenu.classList.add('translate-y-0', 'opacity-100');
+                menuBtn.innerHTML = '<i data-lucide="x" class="w-7 h-7"></i>';
+            } else {
+                mobileMenu.classList.add('-translate-y-full', 'opacity-0', 'pointer-events-none');
+                mobileMenu.classList.remove('translate-y-0', 'opacity-100');
+                menuBtn.innerHTML = '<i data-lucide="menu" class="w-7 h-7"></i>';
+            }
+            lucide.createIcons();
+        });
+
+        // Close mobile menu on link click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuOpen = false;
+                mobileMenu.classList.add('-translate-y-full', 'opacity-0', 'pointer-events-none');
+                mobileMenu.classList.remove('translate-y-0', 'opacity-100');
+                menuBtn.innerHTML = '<i data-lucide="menu" class="w-7 h-7"></i>';
+                lucide.createIcons();
+            });
+        });
+    </script>
+</body>
+</html>
